@@ -1,3 +1,3 @@
 # imageUpload-Display
-Install node modules
+Install node modules and 
 mongodb

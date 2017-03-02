@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="contact-app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ImageUpload/Display</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="mainController as mainCtrl">
+<div class="container" style=" background-color: #bce8f1;">
+    <h1 class="text-center">{{ 'Image Upload and Display' | uppercase }}  </h1>
+
+    <div class="row text-center">
+        <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2">
+            <h3>
+                Chose Image
+            </h3>
+            <input id="abcd" class="form-control" type="file"  onchange="angular.element(this).scope().fileNameChanged(this)"/>
+        </div>
+    </div>
+    <div class="row text-center">
+         <img ng-if="display" ng-src="{{img.img.data}}" ng-repeat="img in contactList" style="width: 150px;height: 150px">
+    </div>
+</div>
+</body>
+<script src="lib/angular.min.js"></script>
+<script src="app.js"></script>
+</html>
